@@ -283,9 +283,7 @@ YOLOv8 的损失函数通常包括以下部分：
    - 模型预测中心偏移量 `(Δx, Δy)` 和宽高 `(w, h)`。
    - 映射到输入图像的坐标为：
 
-     $$
-     x = x_{\text{ref}} + \Delta x, \quad y = y_{\text{ref}} + \Delta y
-     $$
+     $$x = x_{\text{ref}} + \Delta x, \quad y = y_{\text{ref}} + \Delta y$$
 
 
 3. **与标注信息对比**：
@@ -306,18 +304,14 @@ YOLOv8 的损失函数通常包括以下部分：
 1. **参考点计算**：
    - 参考点在输入图像上的坐标为：
 
-     $$
-     x_{\text{ref}} = (20 + 0.5) \times 8 = 164, \quad y_{\text{ref}} = (10 + 0.5) \times 8 = 84
-     $$
+     $$x_{\text{ref}} = (20 + 0.5) \times 8 = 164, \quad y_{\text{ref}} = (10 + 0.5) \times 8 = 84$$
 
 
 2. **预测边界框**：
    - 模型预测 `(Δx, Δy) = (0.2, -0.1)`，`(w, h) = (50, 30)`。
    - 映射到输入图像的坐标为：
 
-     $$
-     x = 164 + 0.2 \times 8 = 165.6, \quad y = 84 + (-0.1) \times 8 = 83.2
-     $$
+     $$x = 164 + 0.2 \times 8 = 165.6, \quad y = 84 + (-0.1) \times 8 = 83.2$$
 
 
 3. **与标注信息对比**：
@@ -353,15 +347,13 @@ $$
 - $c$：预测框和真实框的最小外接矩形的对角线长度。
 - $v$：宽高比的惩罚项，计算公式为：
 
-  $$
-  v = \frac{4}{\pi^2} \left( \arctan\left(\frac{w_{gt}}{h_{gt}}\right) - \arctan\left(\frac{w}{h}\right) \right)^2
-  $$
+$$v = \frac{4}{\pi^2} \left( \arctan\left(\frac{w_{gt}}{h_{gt}}\right) - \arctan\left(\frac{w}{h}\right) \right)^2$$
 
 - $\alpha$：权重系数，计算公式为：
 
-  $$
+$$
   \alpha = \frac{v}{1 - \text{IoU} + v}
-  $$
+$$
 
 
 #### **CIoU Loss 的优点**
@@ -416,7 +408,7 @@ L_{\text{total}} = \lambda_{\text{box}} L_{\text{box}} + \lambda_{\text{cls}} L_
 $$
 
 其中：
-- $\lambda_{\text{box}}$、$\lambda_{\text{cls}}$、$\lambda_{\text{conf}}$ 是权重系数，用于平衡不同损失项的重要性。
+- $\lambda_{\text{box}}$、 $\lambda_{\text{cls}}$ 、 $\lambda_{\text{conf}}$  是权重系数，用于平衡不同损失项的重要性。
 
 
 ### **5.5 动态标签分配（Dynamic Label Assignment）**
