@@ -286,9 +286,7 @@ YOLOv8 的损失函数通常包括以下部分：
    - 映射到输入图像的坐标为：
 
      $$
-
      x = x_{\text{ref}} + \Delta x, \quad y = y_{\text{ref}} + \Delta y
-
      $$
 
 
@@ -311,9 +309,7 @@ YOLOv8 的损失函数通常包括以下部分：
    - 参考点在输入图像上的坐标为：
 
      $$
-
      x_{\text{ref}} = (20 + 0.5) \times 8 = 164, \quad y_{\text{ref}} = (10 + 0.5) \times 8 = 84
-
      $$
 
 
@@ -322,9 +318,7 @@ YOLOv8 的损失函数通常包括以下部分：
    - 映射到输入图像的坐标为：
 
      $$
-
      x = 164 + 0.2 \times 8 = 165.6, \quad y = 84 + (-0.1) \times 8 = 83.2
-
      $$
 
 
@@ -352,9 +346,7 @@ YOLOv8 的损失函数是其目标检测性能的核心组成部分。它通过�
 CIoU Loss 不仅考虑了 IoU（交并比），还引入了中心点距离和宽高比的惩罚项：
 
 $$
-
 \text{CIoU} = \text{IoU} - \frac{\rho^2(b, b_{gt})}{c^2} - \alpha v
-
 $$
 
 其中：
@@ -364,17 +356,13 @@ $$
 - $v$：宽高比的惩罚项，计算公式为：
 
   $$
-
   v = \frac{4}{\pi^2} \left( \arctan\left(\frac{w_{gt}}{h_{gt}}\right) - \arctan\left(\frac{w}{h}\right) \right)^2
-
   $$
 
 - $\alpha$：权重系数，计算公式为：
 
   $$
-
   \alpha = \frac{v}{1 - \text{IoU} + v}
-
   $$
 
 
@@ -390,9 +378,7 @@ $$
 对于每个类别，分类损失的公式为：
 
 $$
-
 L_{\text{cls}} = -\frac{1}{N} \sum_{i=1}^N \left[ y_i \log(p_i) + (1 - y_i) \log(1 - p_i) \right]
-
 $$
 
 其中：
@@ -412,9 +398,7 @@ $$
 置信度损失的公式为：
 
 $$
-
 L_{\text{conf}} = -\frac{1}{N} \sum_{i=1}^N \left[ c_i \log(\hat{c}_i) + (1 - c_i) \log(1 - \hat{c}_i) \right]
-
 $$
 
 其中：
@@ -430,9 +414,7 @@ $$
 YOLOv8 的总损失函数是上述三个子损失函数的加权和：
 
 $$
-
 L_{\text{total}} = \lambda_{\text{box}} L_{\text{box}} + \lambda_{\text{cls}} L_{\text{cls}} + \lambda_{\text{conf}} L_{\text{conf}}
-
 $$
 
 其中：
