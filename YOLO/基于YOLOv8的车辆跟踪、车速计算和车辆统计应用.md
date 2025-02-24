@@ -72,7 +72,7 @@ video_writer.release()
 cv2.destroyAllWindows()
 ```
 ## 3、运行结果
-![在这里插入图片描述](access/002.jpeg#pic_center)
+![在这里插入图片描述](assets/002.jpeg#pic_center)
 ## 4、`ultralytics=8.3.x中的实现方式`
 #### 4.1主要的变化
   - Model类将在解决方案中实例化，因此用户只需要提供模型文件路径。
@@ -113,5 +113,5 @@ cap.release()
 cv2.destroyAllWindows()
 ```
 #### 4.3 ultralytics=8.3.x版本结果
-![在这里插入图片描述](access/003.jpeg#pic_center)
+![在这里插入图片描述](assets/003.jpeg#pic_center)
 

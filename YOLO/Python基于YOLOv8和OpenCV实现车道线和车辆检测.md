@@ -312,7 +312,7 @@ while cap.isOpened():
         break
 ```
 ## 5、结果
-![在这里插入图片描述](access/001.png#pic_center)
+![在这里插入图片描述](assets/001.png#pic_center)
 
  - 项目源码地址: `https://github.com/CityIsBetter/Lane_Detection`
  
