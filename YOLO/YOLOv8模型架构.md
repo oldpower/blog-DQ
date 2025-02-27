@@ -10,7 +10,7 @@
  - 在Backbone中将第一个6x6 Conv替换为3x3 Conv
  - 删除两个Conv（YOLOv5配置中的第10和第14个）
  - 在Bottleneck中将第一个1x1 Conv替换为3x3 Conv
- - 使用解耦头并删除objectness分支
+ - 使用解耦头并删除objectness分支[详细说明](YOLOv8模型架构_add01.md)
 
 ---
 
