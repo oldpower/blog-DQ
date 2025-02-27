@@ -1,6 +1,7 @@
 ## 1、YOLOv8模型结构
 
 ### Model structure of YOLOv8 detection models(P5) - yolov8n/s/m/l/x:
+![yolov5structure-P5](assets/yolov5-structure-P5-yolov5-l.jpg)
 ![yolov8structure-P5](assets/yolov8-structure-P5-yolov8n_s_m_l_x.jpg)
 
 与YOLOv5相比的变化:
