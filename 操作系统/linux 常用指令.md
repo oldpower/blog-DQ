@@ -34,3 +34,14 @@ ls -l log.txt | awk '{print $5/1024/1024 " MB"}'
 ```bash
 scp ./log.txt root@192.168.xxx.xxx:/home/log.txt
 ```
+
+#### 0005 `rsync`文件复制存在就跳过
+
+```bash
+rsync -avz --ignore-existing /opt/retrosynthesis/dengyanyan/pubchem/all_data/162 ubuntu@192.168.103.200:/home/备份文件/有机合成/原始数据/pubchem/all_data/
+```
+- `-a`：归档模式，保留文件属性、权限等。
+- `-v`：详细输出，显示传输过程中的信息。
+- `-z`：压缩传输，减少网络带宽占用。
+- `--ignore-existing`：跳过目标目录中已经存在的文件。
+
